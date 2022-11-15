@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="../../public/images/favicon.png" type="image/x-icon">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&amp;family=Poppins:wght@400;600&amp;display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="../../public/styles/main.css">
+  <link rel="stylesheet" href="../../public/styles/partials/header.css">
+  <link rel="stylesheet" href="../../public/styles/partials/forms.css">
+  <link rel="stylesheet" href="../../public/styles/partials/page-give-classes.css">
+
+  <title>Proffy</title>
+  <script src="../utils/give-feedback.js"></script>
+</head>
+
+<body id="page-give-classes">
+
+  <div id="container">
+    <header class="page-header">
+
+      <div class="top-bar-container">
+        <a href="/">
+          <img src="../../public/images/icons/back.svg" alt="Voltar">
+        </a>
+      </div>
+
+      <div class="header-content">
+        <strong>Ficamos felizes em você ter usado nossa plataforma!</strong>
+        <p>Preencha nosso formulario de feedback e nos diga o que achou!</p>
+      </div>
+    </header>
+
+    <main>
+      <form id="create-feedback" method="POST">
+        <fieldset>
+          <legend>Seus dados</legend>
+
+          <div class="input-block">
+            <label for="name">Nome completo</label>
+            <input name="name" id="name" required>
+          </div>
+
+          <div class="textarea-block">
+            <label for="opinion">Nos fale um pouco sobre sua experiência usando nossa plataforma!</label>
+            <textarea name="opinion" id="feedback" required></textarea>
+          </div>
+        </fieldset>
+      </form>
+
+      <footer>
+        <p>
+          <img src="../../public/images/icons/warning.svg" alt="Aviso importante">
+          Importante! <br> Preencha todos os campos
+        </p>
+        <button type="button" form="create-class" onclick="saveFeedbackinLocalStorage()">Enviar Feedback</button>
+      </footer>
+    </main>
+  </div>
+</body>
+</html>
